@@ -10,7 +10,11 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-background to-accent/10 py-20 md:py-32">
+      <section className="relative bg-gradient-to-br from-secondary via-background to-accent/10 py-20 md:py-32 overflow-hidden">
+        {/* Paint Splatter Decorations */}
+        <img src="/paint-splatter-purple.png" alt="" className="absolute top-10 right-10 w-32 h-32 opacity-40 pointer-events-none animate-bounce" style={{animationDuration: '3s'}} />
+        <img src="/paint-splatter-turquoise.png" alt="" className="absolute bottom-20 left-10 w-40 h-40 opacity-30 pointer-events-none" />
+        <img src="/paint-splatter-pink.png" alt="" className="absolute top-1/2 right-1/4 w-24 h-24 opacity-25 pointer-events-none" />
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-4">
@@ -80,7 +84,10 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16">
+      <section className="relative py-16 overflow-hidden">
+        {/* More Paint Splatters */}
+        <img src="/paint-splatter-green.png" alt="" className="absolute top-10 left-5 w-28 h-28 opacity-20 pointer-events-none" />
+        <img src="/paint-splatter-pink.png" alt="" className="absolute bottom-10 right-10 w-36 h-36 opacity-25 pointer-events-none" />
         <div className="container">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Featured Creations</h2>

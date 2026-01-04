@@ -184,7 +184,12 @@ export async function createOrder(order: InsertOrder) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   const result = await db.insert(orders).values(order);
-  return Number((result as any).insertId);
+  // MySQL2 driver returns insertId in the result array
+  const insertId = (result as any)[0]?.insertId;
+  if (!insertId) {
+    throw new Error("Failed to get order ID from database");
+  }
+  return Number(insertId);
 }
 
 export async function getOrderById(id: number) {

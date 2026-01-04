@@ -109,3 +109,8 @@
 ## Background Color Fix
 - [x] Regenerate pink earrings image with pure white background
 - [x] Upload new image to S3 and update database
+
+## Checkout Payment Error Fix
+- [x] Investigate orderId NaN error in order creation
+- [x] Fix order creation logic in backend routers
+- [x] Test complete checkout flow with test payment

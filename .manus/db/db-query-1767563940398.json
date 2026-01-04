@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO products (name, slug, description, price, categoryId, images, materials, stockQuantity, isFeatured, createdAt, updatedAt) \nVALUES (\n  'Pink Swirl Earrings with Blue Dots',\n  'pink-swirl-earrings-blue-dots',\n  'Adorable handmade polymer clay earrings in pink with beautiful swirl patterns and bright blue dots. Each piece is lovingly crafted by our talented 5-year-old artist! These lightweight earrings feature a trapezoid shape and silver-tone hooks. Perfect for adding a pop of color to any outfit!',\n  '7.00',\n  1,\n  '[\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/mmPgjSswOodETYnY.png\"]',\n  'Polymer clay, silver-tone hooks',\n  8,\n  1,\n  NOW(),\n  NOW()\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute INSERT INTO products (name, slug, description, price, categoryId, images, materials, stockQuantity, isFeatured, createdAt, updatedAt) \nVALUES (\n  'Pink Swirl Earrings with Blue Dots',\n  'pink-swirl-earrings-blue-dots',\n  'Adorable handmade polymer clay earrings in pink with beautiful swirl patterns and bright blue dots. Each piece is lovingly crafted by our talented 5-year-old artist! These lightweight earrings feature a trapezoid shape and silver-tone hooks. Perfect for adding a pop of color to any outfit!',\n  '7.00',\n  1,\n  '[\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/mmPgjSswOodETYnY.png\"]',\n  'Polymer clay, silver-tone hooks',\n  8,\n  1,\n  NOW(),\n  NOW()\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 71
+}

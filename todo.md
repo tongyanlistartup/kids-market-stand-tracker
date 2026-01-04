@@ -87,3 +87,9 @@
 - [x] Update form validation for new fields
 - [x] Update backend order creation logic
 - [x] Update admin dashboard to display new fields
+
+## New Product - Pink Earrings
+- [x] Beautify pink earring image with clean white background
+- [x] Upload image to S3 and website
+- [x] Create product entry in database at $7
+- [x] Mark as created by 5 year old in description

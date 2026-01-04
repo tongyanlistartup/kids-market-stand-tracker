@@ -70,3 +70,5 @@
 - [x] Review current admin page implementation
 - [x] Add order management interface to admin dashboard
 - [x] Document SQL query interface location
+
+- [ ] Push admin dashboard enhancements to GitHub

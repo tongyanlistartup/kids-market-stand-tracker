@@ -61,3 +61,7 @@
 - [x] Display on homepage and shop page
 
 - [x] Fix nested anchor tag error on Shop page
+
+- [x] Delete "Beautiful Earrings" test product from database
+
+- [ ] Push latest changes to GitHub

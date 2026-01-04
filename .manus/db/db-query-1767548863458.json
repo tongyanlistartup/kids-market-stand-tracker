@@ -1,0 +1,15 @@
+{
+  "query": "SELECT id, name, slug FROM products WHERE name LIKE '%Beautiful%Earrings%' OR slug LIKE '%beautiful-earrings%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute SELECT id, name, slug FROM products WHERE name LIKE '%Beautiful%Earrings%' OR slug LIKE '%beautiful-earrings%';",
+  "rows": [
+    {
+      "id": "1",
+      "name": "Beautiful Earrings",
+      "slug": "beautiful-earrings-test"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tslug\n1\tBeautiful Earrings\tbeautiful-earrings-test\n",
+  "stderr": "",
+  "execution_time_ms": 51
+}

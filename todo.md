@@ -59,3 +59,5 @@
 - [x] Upload image to S3 storage
 - [x] Add product to database with image
 - [x] Display on homepage and shop page
+
+- [x] Fix nested anchor tag error on Shop page

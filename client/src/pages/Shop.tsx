@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'wouter';
+import { useLocation } from 'wouter';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { trpc } from '@/lib/trpc';
@@ -61,37 +61,39 @@ export default function Shop() {
               const firstImage = images[0] || '/placeholder.jpg';
               
               return (
-                <Link key={product.id} href={`/product/${product.slug}`}>
-                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group h-full">
-                    <div className="aspect-square overflow-hidden bg-muted">
-                      <img
-                        src={firstImage}
-                        alt={product.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <CardContent className="p-4 space-y-2">
-                      <h3 className="font-semibold text-lg group-hover:text-primary transition-colors line-clamp-2">
-                        {product.name}
-                      </h3>
-                      {product.description && (
-                        <p className="text-sm text-muted-foreground line-clamp-2">
-                          {product.description}
-                        </p>
+                <Card 
+                  key={product.id}
+                  className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group h-full"
+                  onClick={() => window.location.href = `/product/${product.slug}`}
+                >
+                  <div className="aspect-square overflow-hidden bg-muted">
+                    <img
+                      src={firstImage}
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <CardContent className="p-4 space-y-2">
+                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors line-clamp-2">
+                      {product.name}
+                    </h3>
+                    {product.description && (
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        {product.description}
+                      </p>
+                    )}
+                    <div className="flex items-center justify-between pt-2">
+                      <p className="text-2xl font-bold text-primary">
+                        ${parseFloat(product.price).toFixed(2)}
+                      </p>
+                      {product.stockQuantity <= 5 && product.stockQuantity > 0 && (
+                        <span className="text-xs text-amber-600 font-medium">
+                          Only {product.stockQuantity} left!
+                        </span>
                       )}
-                      <div className="flex items-center justify-between pt-2">
-                        <p className="text-2xl font-bold text-primary">
-                          ${parseFloat(product.price).toFixed(2)}
-                        </p>
-                        {product.stockQuantity <= 5 && product.stockQuantity > 0 && (
-                          <span className="text-xs text-amber-600 font-medium">
-                            Only {product.stockQuantity} left!
-                          </span>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
+                    </div>
+                  </CardContent>
+                </Card>
               );
             })}
           </div>

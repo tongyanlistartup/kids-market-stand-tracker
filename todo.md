@@ -99,4 +99,9 @@
 - [x] Ensure hooks appear gold-toned (correct color)
 - [x] Update product image in database
 
-- [ ] Push all latest changes to GitHub
+- [x] Push all latest changes to GitHub
+
+## Product Updates
+- [x] Update pink earrings material from "silver-tone" to "gold-tone"
+- [x] Match background tones between product images (both use light gray/white)
+- [x] Lower Wood Grain Floral Earrings price from $18 to $10

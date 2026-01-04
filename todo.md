@@ -46,3 +46,7 @@
 - [x] Custom request review and response
 - [x] Testimonial moderation
 - [x] Newsletter subscriber management
+
+
+## Bug Fixes
+- [x] Fix nested anchor tag error on homepage

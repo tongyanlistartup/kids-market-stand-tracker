@@ -73,7 +73,7 @@ export default function OrderConfirmation() {
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <p className="text-muted-foreground">Customer Name</p>
-                  <p className="font-medium">{order.customerName}</p>
+                  <p className="font-medium">{order.customerFirstName} {order.customerLastName}</p>
                 </div>
                 <div>
                   <p className="text-muted-foreground">Email</p>
@@ -85,12 +85,13 @@ export default function OrderConfirmation() {
                     <p className="font-medium">{order.customerPhone}</p>
                   </div>
                 )}
-                {order.shippingAddress && (
-                  <div className="col-span-2">
-                    <p className="text-muted-foreground">Shipping Address</p>
-                    <p className="font-medium whitespace-pre-line">{order.shippingAddress}</p>
-                  </div>
-                )}
+                <div className="col-span-2">
+                  <p className="text-muted-foreground">Shipping Address</p>
+                  <p className="font-medium">
+                    {order.shippingStreet}<br />
+                    {order.shippingCity}, {order.shippingState} {order.shippingZipCode}
+                  </p>
+                </div>
               </div>
             </div>
 

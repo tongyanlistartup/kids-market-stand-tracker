@@ -80,3 +80,10 @@
 - [x] Add decorative elements throughout site
 - [x] Update homepage with playful design
 - [x] Update all pages with new aesthetic
+
+## Checkout Form Updates
+- [x] Update database schema to separate name and address fields
+- [x] Update checkout form UI with new fields
+- [x] Update form validation for new fields
+- [x] Update backend order creation logic
+- [x] Update admin dashboard to display new fields

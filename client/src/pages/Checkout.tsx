@@ -16,10 +16,14 @@ export default function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);
 
   const [formData, setFormData] = useState({
-    customerName: '',
+    customerFirstName: '',
+    customerLastName: '',
     customerEmail: '',
     customerPhone: '',
-    shippingAddress: '',
+    shippingStreet: '',
+    shippingCity: '',
+    shippingState: '',
+    shippingZipCode: '',
   });
 
   const createOrderMutation = trpc.orders.create.useMutation();
@@ -79,14 +83,25 @@ export default function Checkout() {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="customerName">Full Name *</Label>
-                  <Input
-                    id="customerName"
-                    required
-                    value={formData.customerName}
-                    onChange={(e) => setFormData({ ...formData, customerName: e.target.value })}
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="customerFirstName">First Name *</Label>
+                    <Input
+                      id="customerFirstName"
+                      required
+                      value={formData.customerFirstName}
+                      onChange={(e) => setFormData({ ...formData, customerFirstName: e.target.value })}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="customerLastName">Last Name *</Label>
+                    <Input
+                      id="customerLastName"
+                      required
+                      value={formData.customerLastName}
+                      onChange={(e) => setFormData({ ...formData, customerLastName: e.target.value })}
+                    />
+                  </div>
                 </div>
 
                 <div className="space-y-2">
@@ -110,15 +125,48 @@ export default function Checkout() {
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="shippingAddress">Shipping Address</Label>
-                  <Textarea
-                    id="shippingAddress"
-                    rows={4}
-                    placeholder="Street address, city, state, ZIP code"
-                    value={formData.shippingAddress}
-                    onChange={(e) => setFormData({ ...formData, shippingAddress: e.target.value })}
-                  />
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="shippingStreet">Street Address *</Label>
+                    <Input
+                      id="shippingStreet"
+                      required
+                      placeholder="123 Main St, Apt 4B"
+                      value={formData.shippingStreet}
+                      onChange={(e) => setFormData({ ...formData, shippingStreet: e.target.value })}
+                    />
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="shippingCity">City *</Label>
+                      <Input
+                        id="shippingCity"
+                        required
+                        value={formData.shippingCity}
+                        onChange={(e) => setFormData({ ...formData, shippingCity: e.target.value })}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="shippingState">State *</Label>
+                      <Input
+                        id="shippingState"
+                        required
+                        placeholder="CA"
+                        value={formData.shippingState}
+                        onChange={(e) => setFormData({ ...formData, shippingState: e.target.value })}
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="shippingZipCode">ZIP Code *</Label>
+                    <Input
+                      id="shippingZipCode"
+                      required
+                      placeholder="12345"
+                      value={formData.shippingZipCode}
+                      onChange={(e) => setFormData({ ...formData, shippingZipCode: e.target.value })}
+                    />
+                  </div>
                 </div>
 
                 <Button type="submit" size="lg" className="w-full" disabled={isProcessing}>

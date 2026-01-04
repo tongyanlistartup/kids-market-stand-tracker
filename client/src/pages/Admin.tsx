@@ -70,7 +70,7 @@ export default function Admin() {
   const filteredOrders = orders?.filter((order) => {
     const matchesSearch = 
       order.orderNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      order.customerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      `${order.customerFirstName} ${order.customerLastName}`.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.customerEmail.toLowerCase().includes(searchTerm.toLowerCase());
     
     const matchesStatus = statusFilter === 'all' || order.status === statusFilter;
@@ -237,7 +237,7 @@ export default function Admin() {
                     {filteredOrders.map((order) => (
                       <TableRow key={order.id}>
                         <TableCell className="font-medium">{order.orderNumber}</TableCell>
-                        <TableCell>{order.customerName}</TableCell>
+                        <TableCell>{order.customerFirstName} {order.customerLastName}</TableCell>
                         <TableCell className="text-sm text-muted-foreground">{order.customerEmail}</TableCell>
                         <TableCell className="font-semibold">${parseFloat(order.totalAmount).toFixed(2)}</TableCell>
                         <TableCell>
@@ -318,7 +318,7 @@ export default function Admin() {
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-muted-foreground">Name:</span>
-                    <p className="font-medium">{selectedOrder.customerName}</p>
+                    <p className="font-medium">{selectedOrder.customerFirstName} {selectedOrder.customerLastName}</p>
                   </div>
                   <div>
                     <span className="text-muted-foreground">Email:</span>
@@ -341,9 +341,8 @@ export default function Admin() {
               <div>
                 <h3 className="font-semibold mb-3">Shipping Address</h3>
                 <div className="text-sm space-y-1">
-                  <p>{selectedOrder.shippingAddress}</p>
-                  <p>{selectedOrder.shippingCity}, {selectedOrder.shippingState} {selectedOrder.shippingZip}</p>
-                  <p>{selectedOrder.shippingCountry}</p>
+                  <p>{selectedOrder.shippingStreet}</p>
+                  <p>{selectedOrder.shippingCity}, {selectedOrder.shippingState} {selectedOrder.shippingZipCode}</p>
                 </div>
               </div>
 

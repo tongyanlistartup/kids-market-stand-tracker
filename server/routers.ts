@@ -137,10 +137,14 @@ export const appRouter = router({
   orders: router({
     create: publicProcedure
       .input(z.object({
-        customerName: z.string(),
+        customerFirstName: z.string(),
+        customerLastName: z.string(),
         customerEmail: z.string().email(),
         customerPhone: z.string().optional(),
-        shippingAddress: z.string().optional(),
+        shippingStreet: z.string(),
+        shippingCity: z.string(),
+        shippingState: z.string(),
+        shippingZipCode: z.string(),
         items: z.array(z.object({
           productId: z.number(),
           quantity: z.number(),
@@ -179,10 +183,14 @@ export const appRouter = router({
         // Create order
         const orderId = await db.createOrder({
           orderNumber,
-          customerName: input.customerName,
+          customerFirstName: input.customerFirstName,
+          customerLastName: input.customerLastName,
           customerEmail: input.customerEmail,
           customerPhone: input.customerPhone,
-          shippingAddress: input.shippingAddress,
+          shippingStreet: input.shippingStreet,
+          shippingCity: input.shippingCity,
+          shippingState: input.shippingState,
+          shippingZipCode: input.shippingZipCode,
           totalAmount: totalAmount.toFixed(2),
           status: 'pending',
           paymentStatus: 'pending',
@@ -262,7 +270,7 @@ export const appRouter = router({
             orderId: input.orderId.toString(),
             orderNumber: input.orderNumber,
             customerEmail: order.customerEmail,
-            customerName: order.customerName,
+            customerName: `${order.customerFirstName} ${order.customerLastName}`,
           },
           allow_promotion_codes: true,
         });

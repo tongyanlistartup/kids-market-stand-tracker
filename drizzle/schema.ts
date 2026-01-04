@@ -63,10 +63,14 @@ export type InsertProduct = typeof products.$inferInsert;
 export const orders = mysqlTable("orders", {
   id: int("id").autoincrement().primaryKey(),
   orderNumber: varchar("orderNumber", { length: 50 }).notNull().unique(),
-  customerName: varchar("customerName", { length: 200 }).notNull(),
+  customerFirstName: varchar("customerFirstName", { length: 100 }).notNull(),
+  customerLastName: varchar("customerLastName", { length: 100 }).notNull(),
   customerEmail: varchar("customerEmail", { length: 320 }).notNull(),
   customerPhone: varchar("customerPhone", { length: 50 }),
-  shippingAddress: text("shippingAddress"),
+  shippingStreet: varchar("shippingStreet", { length: 255 }).notNull(),
+  shippingCity: varchar("shippingCity", { length: 100 }).notNull(),
+  shippingState: varchar("shippingState", { length: 50 }).notNull(),
+  shippingZipCode: varchar("shippingZipCode", { length: 20 }).notNull(),
   totalAmount: decimal("totalAmount", { precision: 10, scale: 2 }).notNull(),
   status: mysqlEnum("status", ["pending", "paid", "processing", "shipped", "delivered", "cancelled"]).default("pending").notNull(),
   paymentIntentId: varchar("paymentIntentId", { length: 255 }), // Stripe payment intent ID

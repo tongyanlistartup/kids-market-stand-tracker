@@ -105,3 +105,7 @@
 - [x] Update pink earrings material from "silver-tone" to "gold-tone"
 - [x] Match background tones between product images (both use light gray/white)
 - [x] Lower Wood Grain Floral Earrings price from $18 to $10
+
+## Background Color Fix
+- [x] Regenerate pink earrings image with pure white background
+- [x] Upload new image to S3 and update database

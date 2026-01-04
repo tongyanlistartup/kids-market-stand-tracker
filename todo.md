@@ -93,3 +93,8 @@
 - [x] Upload image to S3 and website
 - [x] Create product entry in database at $7
 - [x] Mark as created by 5 year old in description
+
+## Pink Earrings Image Color Correction
+- [x] Regenerate image with more accurate, less vibrant pink colors
+- [x] Ensure hooks appear gold-toned (correct color)
+- [x] Update product image in database

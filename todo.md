@@ -50,3 +50,6 @@
 
 ## Bug Fixes
 - [x] Fix nested anchor tag error on homepage
+
+## Deployment
+- [ ] Push code to GitHub repository

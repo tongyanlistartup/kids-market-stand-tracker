@@ -52,4 +52,10 @@
 - [x] Fix nested anchor tag error on homepage
 
 ## Deployment
-- [ ] Push code to GitHub repository
+- [x] Push code to GitHub repository
+
+## Product Images
+- [x] Beautify earring product image
+- [x] Upload image to S3 storage
+- [x] Add product to database with image
+- [x] Display on homepage and shop page

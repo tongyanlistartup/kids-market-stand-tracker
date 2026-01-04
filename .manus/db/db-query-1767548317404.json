@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO categories (name, slug, description) VALUES ('Earrings', 'earrings', 'Beautiful handmade polymer clay earrings') ON DUPLICATE KEY UPDATE name=name;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute INSERT INTO categories (name, slug, description) VALUES ('Earrings', 'earrings', 'Beautiful handmade polymer clay earrings') ON DUPLICATE KEY UPDATE name=name;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 101
+}

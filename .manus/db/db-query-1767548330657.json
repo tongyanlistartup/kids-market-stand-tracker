@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO products (name, slug, description, price, categoryId, materials, colors, images, stockQuantity, isAvailable, isFeatured, createdBy) VALUES ('Wood Grain Floral Earrings', 'wood-grain-floral-earrings', 'Beautiful handcrafted polymer clay earrings featuring a stunning wood grain texture with delicate pink and red flowers. Each pair is unique and made with love by our young artists.', '18.00', 1, 'Polymer Clay, Copper Hooks', 'Brown, Pink, Red, Green', '[\"/wood-grain-floral-earrings.png\"]', 5, 1, 1, '9-year-old artist');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute INSERT INTO products (name, slug, description, price, categoryId, materials, colors, images, stockQuantity, isAvailable, isFeatured, createdBy) VALUES ('Wood Grain Floral Earrings', 'wood-grain-floral-earrings', 'Beautiful handcrafted polymer clay earrings featuring a stunning wood grain texture with delicate pink and red flowers. Each pair is unique and made with love by our young artists.', '18.00', 1, 'Polymer Clay, Copper Hooks', 'Brown, Pink, Red, Green', '[\"/wood-grain-floral-earrings.png\"]', 5, 1, 1, '9-year-old artist');",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 64
+}

@@ -125,3 +125,8 @@
 - [x] Fix order confirmation page to properly receive order number from Stripe redirect
 - [x] Replace error message with cheerful success message
 - [x] Test complete payment flow to verify success page displays correctly
+
+## Remove Test Product
+- [x] Identify test product in database
+- [x] Delete test product from products table
+- [x] Verify shop page displays correctly without test product

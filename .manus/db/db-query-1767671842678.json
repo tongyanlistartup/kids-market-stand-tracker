@@ -1,0 +1,14 @@
+{
+  "query": "SELECT id, name FROM products WHERE name LIKE '%Test%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute SELECT id, name FROM products WHERE name LIKE '%Test%';",
+  "rows": [
+    {
+      "id": "30002",
+      "name": "Test Product DB"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\n30002\tTest Product DB\n",
+  "stderr": "",
+  "execution_time_ms": 58
+}

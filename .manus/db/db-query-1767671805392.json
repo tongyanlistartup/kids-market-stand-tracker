@@ -1,0 +1,28 @@
+{
+  "query": "SELECT id, name, description, price FROM products ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute SELECT id, name, description, price FROM products ORDER BY id;",
+  "rows": [
+    {
+      "id": "3",
+      "name": "Wood Grain Floral Earrings",
+      "description": "Beautiful handcrafted polymer clay earrings featuring a stunning wood grain texture with delicate pink and red flowers. Each pair is unique and made with love by our young artists.",
+      "price": "10.00"
+    },
+    {
+      "id": "30001",
+      "name": "Pink Swirl Earrings with Blue Dots",
+      "description": "Adorable handmade polymer clay earrings in pink with beautiful swirl patterns and bright blue dots. Each piece is lovingly crafted by our talented 5-year-old artist! These lightweight earrings feature a trapezoid shape and silver-tone hooks. Perfect for adding a pop of color to any outfit!",
+      "price": "7.00"
+    },
+    {
+      "id": "30002",
+      "name": "Test Product DB",
+      "description": "Test product for order creation",
+      "price": "15.00"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tdescription\tprice\n3\tWood Grain Floral Earrings\tBeautiful handcrafted polymer clay earrings featuring a stunning wood grain texture with delicate pink and red flowers. Each pair is unique and made with love by our young artists.\t10.00\n30001\tPink Swirl Earrings with Blue Dots\tAdorable handmade polymer clay earrings in pink with beautiful swirl patterns and bright blue dots. Each piece is lovingly crafted by our talented 5-year-old artist! These lightweight earrings feature a trapezoid shape and silver-tone hooks. Perfect for adding a pop of color to any outfit!\t7.00\n30002\tTest Product DB\tTest product for order creation\t15.00\n",
+  "stderr": "",
+  "execution_time_ms": 70
+}

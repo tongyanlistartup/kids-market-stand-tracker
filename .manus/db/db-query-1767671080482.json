@@ -1,0 +1,29 @@
+{
+  "query": "SELECT * FROM orders WHERE orderNumber = 'ORD-1767670999753-DR6SQ3A5Y' LIMIT 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute SELECT * FROM orders WHERE orderNumber = 'ORD-1767670999753-DR6SQ3A5Y' LIMIT 1;",
+  "rows": [
+    {
+      "id": "150006",
+      "orderNumber": "ORD-1767670999753-DR6SQ3A5Y",
+      "customerEmail": "klevia.li@gmail.com",
+      "customerPhone": "5132404840",
+      "totalAmount": "7.00",
+      "status": "paid",
+      "paymentIntentId": "NULL",
+      "paymentStatus": "succeeded",
+      "notes": "NULL",
+      "createdAt": "2026-01-06 03:43:19",
+      "updatedAt": "2026-01-06 03:43:51",
+      "customerFirstName": "Tongyan",
+      "customerLastName": "Li",
+      "shippingStreet": "10028 Calava Ct",
+      "shippingCity": "Union",
+      "shippingState": "KY",
+      "shippingZipCode": "41091"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\torderNumber\tcustomerEmail\tcustomerPhone\ttotalAmount\tstatus\tpaymentIntentId\tpaymentStatus\tnotes\tcreatedAt\tupdatedAt\tcustomerFirstName\tcustomerLastName\tshippingStreet\tshippingCity\tshippingState\tshippingZipCode\n150006\tORD-1767670999753-DR6SQ3A5Y\tklevia.li@gmail.com\t5132404840\t7.00\tpaid\tNULL\tsucceeded\tNULL\t2026-01-06 03:43:19\t2026-01-06 03:43:51\tTongyan\tLi\t10028 Calava Ct\tUnion\tKY\t41091\n",
+  "stderr": "",
+  "execution_time_ms": 106
+}

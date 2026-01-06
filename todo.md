@@ -142,3 +142,9 @@
 ## Price Update
 - [x] Update Pink Swirl Earrings price from $7.00 to $8.00
 - [x] Verify price displays correctly on shop and product pages
+
+## Flower Earrings Display Issues
+- [x] Fix broken product images on shop page
+- [x] Fix raw JSON displaying in color buttons on PDP
+- [x] Fix raw JSON displaying in materials section on PDP
+- [x] Verify color palette indicators show correctly on shop page

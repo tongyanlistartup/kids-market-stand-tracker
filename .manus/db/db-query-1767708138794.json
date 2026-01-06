@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id, name, images, colors, materials FROM products WHERE name = 'Flower Earrings';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute SELECT id, name, images, colors, materials FROM products WHERE name = 'Flower Earrings';",
+  "rows": [
+    {
+      "id": "60001",
+      "name": "Flower Earrings",
+      "images": "[{\"color\": \"Pink\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/QhoICKUmUdAJwKyz.png\"}, {\"color\": \"Blue\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/ELCsvoaXBdLdnoUb.png\"}]",
+      "colors": "[{\"name\": \"Pink\", \"hex\": \"#FFB6D9\"}, {\"name\": \"Blue\", \"hex\": \"#87CEEB\"}]",
+      "materials": "[\"Polymer clay\", \"Silver fish-hook ear wires\"]"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\timages\tcolors\tmaterials\n60001\tFlower Earrings\t[{\"color\": \"Pink\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/QhoICKUmUdAJwKyz.png\"}, {\"color\": \"Blue\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/ELCsvoaXBdLdnoUb.png\"}]\t[{\"name\": \"Pink\", \"hex\": \"#FFB6D9\"}, {\"name\": \"Blue\", \"hex\": \"#87CEEB\"}]\t[\"Polymer clay\", \"Silver fish-hook ear wires\"]\n",
+  "stderr": "",
+  "execution_time_ms": 49
+}

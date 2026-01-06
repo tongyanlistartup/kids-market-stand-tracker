@@ -58,7 +58,19 @@ export default function Shop() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {products.map((product) => {
               const images = JSON.parse(product.images);
-              const firstImage = images[0] || '/placeholder.jpg';
+              // Handle both JSON array and comma-separated string formats
+              let colors = [];
+              if (product.colors) {
+                try {
+                  const parsed = JSON.parse(product.colors);
+                  colors = Array.isArray(parsed) ? parsed : [];
+                } catch {
+                  // If not JSON, it's a comma-separated string - skip color palette for these
+                  colors = [];
+                }
+              }
+              const firstImage = Array.isArray(images) ? (images[0]?.url || images[0]) : images;
+              const hasVariants = colors.length > 1;
               
               return (
                 <Card 
@@ -74,9 +86,23 @@ export default function Shop() {
                     />
                   </div>
                   <CardContent className="p-4 space-y-2">
-                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors line-clamp-2">
-                      {product.name}
-                    </h3>
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="font-semibold text-lg group-hover:text-primary transition-colors line-clamp-2 flex-1">
+                        {product.name}
+                      </h3>
+                      {hasVariants && (
+                        <div className="flex gap-1 flex-shrink-0">
+                          {colors.map((color: any, idx: number) => (
+                            <div
+                              key={idx}
+                              className="w-5 h-5 rounded-full border-2 border-border shadow-sm"
+                              style={{ backgroundColor: color.hex }}
+                              title={color.name}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </div>
                     {product.description && (
                       <p className="text-sm text-muted-foreground line-clamp-2">
                         {product.description}

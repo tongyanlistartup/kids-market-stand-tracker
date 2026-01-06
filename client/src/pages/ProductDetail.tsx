@@ -12,6 +12,7 @@ export default function ProductDetail() {
   const slug = params?.slug || '';
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [added, setAdded] = useState(false);
 
   const { data: product, isLoading } = trpc.products.getBySlug.useQuery({ slug });
@@ -38,8 +39,21 @@ export default function ProductDetail() {
   }
 
   const images = JSON.parse(product.images);
-  const colors = product.colors ? product.colors.split(',').map(c => c.trim()) : [];
-  const materials = product.materials ? product.materials.split(',').map(m => m.trim()) : [];
+  const colors = product.colors ? JSON.parse(product.colors) : [];
+  const materials = product.materials ? JSON.parse(product.materials) : [];
+  
+  // Check if images is array of objects with color and url
+  const hasColorVariants = Array.isArray(images) && images.length > 0 && images[0]?.color;
+  
+  // Initialize selected color if not set
+  if (hasColorVariants && !selectedColor && colors.length > 0) {
+    setSelectedColor(colors[0].name);
+  }
+  
+  // Get current image based on selected color
+  const currentImage = hasColorVariants && selectedColor
+    ? images.find((img: any) => img.color === selectedColor)?.url || images[0]?.url
+    : (Array.isArray(images) ? images[selectedImage] : images);
 
   const handleAddToCart = () => {
     if (product.stockQuantity < quantity) {
@@ -47,11 +61,16 @@ export default function ProductDetail() {
       return;
     }
 
+    // Include selected color in cart item if applicable
+    const itemName = hasColorVariants && selectedColor 
+      ? `${product.name} (${selectedColor})`
+      : product.name;
+
     addItem({
       productId: product.id,
-      name: product.name,
+      name: itemName,
       price: product.price,
-      image: images[0] || '/placeholder.jpg',
+      image: currentImage,
     });
 
     setAdded(true);
@@ -73,12 +92,12 @@ export default function ProductDetail() {
         <div className="space-y-4">
           <div className="aspect-square rounded-lg overflow-hidden bg-muted">
             <img
-              src={images[selectedImage] || '/placeholder.jpg'}
+              src={currentImage || '/placeholder.jpg'}
               alt={product.name}
               className="w-full h-full object-cover"
             />
           </div>
-          {images.length > 1 && (
+          {!hasColorVariants && images.length > 1 && (
             <div className="grid grid-cols-4 gap-4">
               {images.map((img: string, idx: number) => (
                 <button
@@ -106,14 +125,26 @@ export default function ProductDetail() {
             <p className="text-lg text-muted-foreground">{product.description}</p>
           )}
 
-          {colors.length > 0 && (
+          {hasColorVariants && colors.length > 0 && (
             <div>
-              <h3 className="font-semibold mb-2">Colors:</h3>
-              <div className="flex flex-wrap gap-2">
-                {colors.map((color, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-secondary rounded-full text-sm">
-                    {color}
-                  </span>
+              <h3 className="font-semibold mb-3">Choose Color:</h3>
+              <div className="flex flex-wrap gap-3">
+                {colors.map((color: any, idx: number) => (
+                  <button
+                    key={idx}
+                    onClick={() => setSelectedColor(color.name)}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg border-2 transition-all ${
+                      selectedColor === color.name
+                        ? 'border-primary bg-primary/10'
+                        : 'border-border hover:border-primary/50'
+                    }`}
+                  >
+                    <div
+                      className="w-6 h-6 rounded-full border-2 border-border shadow-sm"
+                      style={{ backgroundColor: color.hex }}
+                    />
+                    <span className="font-medium">{color.name}</span>
+                  </button>
                 ))}
               </div>
             </div>
@@ -123,7 +154,7 @@ export default function ProductDetail() {
             <div>
               <h3 className="font-semibold mb-2">Materials:</h3>
               <div className="flex flex-wrap gap-2">
-                {materials.map((material, idx) => (
+                {materials.map((material: string, idx: number) => (
                   <span key={idx} className="px-3 py-1 bg-secondary rounded-full text-sm">
                     {material}
                   </span>

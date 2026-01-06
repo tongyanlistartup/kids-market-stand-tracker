@@ -138,3 +138,7 @@
 - [x] Create product detail page with color variant selector
 - [x] Upload new images and update product data
 - [x] Test variant selection and cart functionality
+
+## Price Update
+- [x] Update Pink Swirl Earrings price from $7.00 to $8.00
+- [x] Verify price displays correctly on shop and product pages

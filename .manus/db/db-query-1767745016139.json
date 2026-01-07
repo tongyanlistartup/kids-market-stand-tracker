@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE products SET images = '[{\"color\":\"Pink\",\"url\":\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/HqZqJTCEBSVgpfrU.png\"},{\"color\":\"Blue\",\"url\":\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/NxNibkYHIvgFCBqh.png\"}]' WHERE slug = 'flower-earrings'",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute UPDATE products SET images = '[{\"color\":\"Pink\",\"url\":\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/HqZqJTCEBSVgpfrU.png\"},{\"color\":\"Blue\",\"url\":\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/NxNibkYHIvgFCBqh.png\"}]' WHERE slug = 'flower-earrings'",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 68
+}

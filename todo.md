@@ -156,3 +156,8 @@
 
 ## Shop Page Nested Anchor Tag Error
 - [x] Fix nested anchor tag error on Shop page (recurring issue)
+
+## Flower Earrings Image Not Loading
+- [x] Investigate why Flower Earrings image shows broken icon on Shop page
+- [x] Check image URL in database
+- [x] Fix image URL or upload new image if needed

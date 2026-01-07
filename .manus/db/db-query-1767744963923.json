@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id, name, slug, images, colors FROM products WHERE name LIKE '%Flower%'",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute SELECT id, name, slug, images, colors FROM products WHERE name LIKE '%Flower%'",
+  "rows": [
+    {
+      "id": "60001",
+      "name": "Flower Earrings",
+      "slug": "flower-earrings",
+      "images": "[{\"color\":\"Pink\",\"url\":\"https://manus-user-assets.s3.us-west-2.amazonaws.com/flower-earrings-pink.png\"},{\"color\":\"Blue\",\"url\":\"https://manus-user-assets.s3.us-west-2.amazonaws.com/flower-earrings-blue.png\"}]",
+      "colors": "[{\"name\":\"Pink\",\"hex\":\"#FFB6D9\"},{\"name\":\"Blue\",\"hex\":\"#87CEEB\"}]"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tslug\timages\tcolors\n60001\tFlower Earrings\tflower-earrings\t[{\"color\":\"Pink\",\"url\":\"https://manus-user-assets.s3.us-west-2.amazonaws.com/flower-earrings-pink.png\"},{\"color\":\"Blue\",\"url\":\"https://manus-user-assets.s3.us-west-2.amazonaws.com/flower-earrings-blue.png\"}]\t[{\"name\":\"Pink\",\"hex\":\"#FFB6D9\"},{\"name\":\"Blue\",\"hex\":\"#87CEEB\"}]\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

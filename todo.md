@@ -148,3 +148,11 @@
 - [x] Fix raw JSON displaying in color buttons on PDP
 - [x] Fix raw JSON displaying in materials section on PDP
 - [x] Verify color palette indicators show correctly on shop page
+
+## Flower Earring Images Not Loading on Published Site
+- [ ] Check image URLs in database are publicly accessible
+- [ ] Verify images load correctly on development server
+- [ ] Test images on published site after deployment
+
+## Shop Page Nested Anchor Tag Error
+- [x] Fix nested anchor tag error on Shop page (recurring issue)

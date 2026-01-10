@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'wouter';
+import { Link } from 'wouter';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/contexts/CartContext';
@@ -7,7 +7,6 @@ import { useState } from 'react';
 export default function Header() {
   const { totalItems } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [, setLocation] = useLocation();
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -39,19 +38,16 @@ export default function Header() {
 
         {/* Cart and Mobile Menu */}
         <div className="flex items-center space-x-4">
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="relative"
-            onClick={() => setLocation('/cart')}
-          >
-            <ShoppingCart className="h-5 w-5" />
-            {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
-                {totalItems}
-              </span>
-            )}
-          </Button>
+          <Link href="/cart">
+            <Button variant="ghost" size="icon" className="relative">
+              <ShoppingCart className="h-5 w-5" />
+              {totalItems > 0 && (
+                <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
+            </Button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <Button

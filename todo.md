@@ -143,10 +143,11 @@
 - [x] Update Pink Swirl Earrings price from $7.00 to $8.00
 - [x] Verify price displays correctly on shop and product pages
 
-## New Product - Pink and Sage Green Earrings
-- [x] Beautify product image with clean white background
-- [x] Generate lifestyle photo of earrings being worn
-- [x] Upload images to S3 CDN
-- [x] Add product to database at $11
-- [x] Mark as made by 9-year-old in description
-- [x] Verify product displays on shop page
+## New Products - Resin Globe Earrings (Pink and Blue)
+- [x] Beautify pink flower resin globe earring image with white background
+- [x] Beautify blue flower resin globe earring image with white background
+- [x] Upload both images to S3 CDN
+- [x] Add pink flower resin earrings to database at $10
+- [x] Add blue flower resin earrings to database at $10
+- [x] Mark both as made by 9-year-old in descriptions
+- [x] Verify both products display on shop page

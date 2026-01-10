@@ -1,9 +1,0 @@
-{
-  "query": "UPDATE products SET materials = '[\"Polymer Clay\",\"Silver-tone Hooks\"]' WHERE slug = 'pink-sage-green-earrings'",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute UPDATE products SET materials = '[\"Polymer Clay\",\"Silver-tone Hooks\"]' WHERE slug = 'pink-sage-green-earrings'",
-  "rows": [],
-  "messages": [],
-  "stdout": "",
-  "stderr": "",
-  "execution_time_ms": 123
-}

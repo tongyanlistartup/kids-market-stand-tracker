@@ -151,3 +151,17 @@
 - [x] Add blue flower resin earrings to database at $10
 - [x] Mark both as made by 9-year-old in descriptions
 - [x] Verify both products display on shop page
+
+## New Batch - 5 Earring Products
+- [x] Beautify burgundy and pink two-tier earrings image
+- [x] Beautify peach arch earrings image
+- [x] Beautify pink heart with cactus earrings image
+- [x] Beautify red rose earrings image
+- [x] Beautify pink pearl charm earrings image
+- [x] Upload all 5 images to S3 CDN
+- [x] Add burgundy/pink earrings to database at $10
+- [x] Add peach arch earrings to database at $10
+- [x] Add pink heart cactus earrings to database at $15
+- [x] Add red rose earrings to database at $8
+- [x] Add pink pearl charm earrings to database at $12
+- [x] Verify all 5 products display on shop page

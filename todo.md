@@ -165,3 +165,8 @@
 - [x] Add red rose earrings to database at $8
 - [x] Add pink pearl charm earrings to database at $12
 - [x] Verify all 5 products display on shop page
+
+## Featured Creations Images Bug
+- [x] Investigate why featured creations images aren't displaying on home page
+- [x] Fix image URLs or component logic
+- [x] Verify images display correctly on home page

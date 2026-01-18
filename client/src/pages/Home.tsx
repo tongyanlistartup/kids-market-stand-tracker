@@ -112,7 +112,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredProducts.slice(0, 6).map((product) => {
                 const images = JSON.parse(product.images);
-                const firstImage = images[0] || '/placeholder.jpg';
+                const firstImage = images[0]?.url || '/placeholder.jpg';
                 
                 return (
                   <Link key={product.id} href={`/product/${product.slug}`}>

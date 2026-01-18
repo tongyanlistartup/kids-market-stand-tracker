@@ -198,3 +198,16 @@
 - [x] Add Pink Green Chalcedony Flower Charm to database at $10 with detailed materials
 - [x] Add White Pearl Bee Charm to database at $10 with detailed materials
 - [x] Verify both products display with scrollable image carousels
+
+## New Products - 4 Bracelets
+- [x] Beautify 2 images for Map Jasper bracelet (product shot, size reference)
+- [x] Beautify 2 images for Lava Stone bracelet (product shot, size reference)
+- [x] Beautify 2 images for Starry Sky Resin bracelet (product shot, size reference)
+- [x] Beautify 2 images for Black Golden Super Seven Crystal bracelet (product shot, size reference)
+- [x] Upload all 8 images to S3 CDN
+- [x] Create new "Bracelets" category in database
+- [x] Add Map Jasper bracelet to database at $10 with detailed materials
+- [x] Add Lava Stone bracelet to database at $10 with detailed materials
+- [x] Add Starry Sky Resin bracelet to database at $9 with detailed materials
+- [x] Add Black Golden Super Seven Crystal bracelet to database at $16 with detailed materials
+- [x] Verify all 4 bracelets display with 2-image carousels

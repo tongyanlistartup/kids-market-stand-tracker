@@ -190,3 +190,11 @@
 - [x] Test image URLs are accessible
 - [x] Fix image URLs in database
 - [x] Verify all three images load correctly on product page
+
+## New Products - 2 Water Bottle Charms
+- [x] Beautify 3 images for chalcedony flower charm (product shot, lifestyle, ruler)
+- [x] Beautify 3 images for white pearl bee charm (product shot, lifestyle, ruler)
+- [x] Upload all 6 images to S3 CDN
+- [x] Add Pink Green Chalcedony Flower Charm to database at $10 with detailed materials
+- [x] Add White Pearl Bee Charm to database at $10 with detailed materials
+- [x] Verify both products display with scrollable image carousels

@@ -177,3 +177,9 @@
 - [x] Create new "Charms" category in database
 - [x] Add water bottle charm product with multiple images at $10
 - [x] Verify product displays with scrollable image carousel
+
+## Fix Water Bottle Charm Ruler Image
+- [x] Regenerate size reference image with straight ruler showing inches
+- [x] Upload corrected image to S3
+- [x] Update product image in database
+- [x] Verify corrected image displays on product page

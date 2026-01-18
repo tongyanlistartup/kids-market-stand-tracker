@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE products \nSET images = JSON_ARRAY(\n  JSON_OBJECT('url', 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/RWgIzaqlxFUPXCId.png', 'alt', 'Yellow Jade Bee Water Bottle Charm'),\n  JSON_OBJECT('url', 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/ZdiHHLQyEHcHdONu.png', 'alt', 'Bee Charm on Water Bottle'),\n  JSON_OBJECT('url', 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/pBojDVsPrIaxbyfF.png', 'alt', 'Bee Charm Size Reference with Ruler')\n),\nupdatedAt = NOW()\nWHERE slug = 'yellow-jade-bee-water-bottle-charm';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute UPDATE products \nSET images = JSON_ARRAY(\n  JSON_OBJECT('url', 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/RWgIzaqlxFUPXCId.png', 'alt', 'Yellow Jade Bee Water Bottle Charm'),\n  JSON_OBJECT('url', 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/ZdiHHLQyEHcHdONu.png', 'alt', 'Bee Charm on Water Bottle'),\n  JSON_OBJECT('url', 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/pBojDVsPrIaxbyfF.png', 'alt', 'Bee Charm Size Reference with Ruler')\n),\nupdatedAt = NOW()\nWHERE slug = 'yellow-jade-bee-water-bottle-charm';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 355
+}

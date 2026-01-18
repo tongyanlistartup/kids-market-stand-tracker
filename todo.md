@@ -183,3 +183,10 @@
 - [x] Upload corrected image to S3
 - [x] Update product image in database
 - [x] Verify corrected image displays on product page
+
+## Water Bottle Charm Images Not Loading
+- [x] Investigate why three images aren't loading on product detail page
+- [x] Check image URLs in database
+- [x] Test image URLs are accessible
+- [x] Fix image URLs in database
+- [x] Verify all three images load correctly on product page

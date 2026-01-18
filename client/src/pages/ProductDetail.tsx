@@ -53,7 +53,7 @@ export default function ProductDetail() {
   // Get current image based on selected color
   const currentImage = hasColorVariants && selectedColor
     ? images.find((img: any) => img.color === selectedColor)?.url || images[0]?.url
-    : (Array.isArray(images) ? images[selectedImage] : images);
+    : (Array.isArray(images) ? images[selectedImage]?.url || images[selectedImage] : images);
 
   const handleAddToCart = () => {
     if (product.stockQuantity < quantity) {
@@ -99,7 +99,7 @@ export default function ProductDetail() {
           </div>
           {!hasColorVariants && images.length > 1 && (
             <div className="grid grid-cols-4 gap-4">
-              {images.map((img: string, idx: number) => (
+              {images.map((img: any, idx: number) => (
                 <button
                   key={idx}
                   onClick={() => setSelectedImage(idx)}
@@ -107,7 +107,7 @@ export default function ProductDetail() {
                     selectedImage === idx ? 'border-primary' : 'border-transparent'
                   }`}
                 >
-                  <img src={img} alt={`${product.name} ${idx + 1}`} className="w-full h-full object-cover" />
+                  <img src={img.url || img} alt={img.alt || `${product.name} ${idx + 1}`} className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>

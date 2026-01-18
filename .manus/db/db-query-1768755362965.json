@@ -1,0 +1,16 @@
+{
+  "query": "SELECT id, name, slug, images FROM products WHERE slug = 'yellow-jade-bee-water-bottle-charm';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute SELECT id, name, slug, images FROM products WHERE slug = 'yellow-jade-bee-water-bottle-charm';",
+  "rows": [
+    {
+      "id": "120006",
+      "name": "Yellow Jade Bee Water Bottle Charm",
+      "slug": "yellow-jade-bee-water-bottle-charm",
+      "images": "[{\"alt\": \"Yellow Jade Bee Water Bottle Charm\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/RWgIzaqlxFUPXCId.png\"}, {\"alt\": \"Bee Charm on Water Bottle\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/ZdiHHLQyEHcHdONu.png\"}, {\"alt\": \"Bee Charm Size Reference with Ruler\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/pBojDVsPrIaxbyfF.png\"}]"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tslug\timages\n120006\tYellow Jade Bee Water Bottle Charm\tyellow-jade-bee-water-bottle-charm\t[{\"alt\": \"Yellow Jade Bee Water Bottle Charm\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/RWgIzaqlxFUPXCId.png\"}, {\"alt\": \"Bee Charm on Water Bottle\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/ZdiHHLQyEHcHdONu.png\"}, {\"alt\": \"Bee Charm Size Reference with Ruler\", \"url\": \"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/pBojDVsPrIaxbyfF.png\"}]\n",
+  "stderr": "",
+  "execution_time_ms": 514
+}

@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE products SET images = '[{\"url\":\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/dhxTxHKHSiOOYDxR.png\",\"alt\":\"Black Golden Super Seven Crystal Bracelet - Product Shot\"},{\"url\":\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/rmKTOELaljPQpuEq.png\",\"alt\":\"Black Golden Super Seven Crystal Bracelet - Size Reference\"}]' WHERE slug = 'black-golden-super-seven-crystal-bracelet';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4XM1cDq5o889ZVr.root --database 79FEbyfoQZvYHzs6Bg5LHD --execute UPDATE products SET images = '[{\"url\":\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/dhxTxHKHSiOOYDxR.png\",\"alt\":\"Black Golden Super Seven Crystal Bracelet - Product Shot\"},{\"url\":\"https://files.manuscdn.com/user_upload_by_module/session_file/310519663273273644/rmKTOELaljPQpuEq.png\",\"alt\":\"Black Golden Super Seven Crystal Bracelet - Size Reference\"}]' WHERE slug = 'black-golden-super-seven-crystal-bracelet';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 356
+}

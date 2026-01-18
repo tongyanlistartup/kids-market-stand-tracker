@@ -211,3 +211,10 @@
 - [x] Add Starry Sky Resin bracelet to database at $9 with detailed materials
 - [x] Add Black Golden Super Seven Crystal bracelet to database at $16 with detailed materials
 - [x] Verify all 4 bracelets display with 2-image carousels
+
+## Fix Super Seven Crystal Bracelet Images
+- [x] Regenerate images with correct white string (not red)
+- [x] Make beads more opaque with subtle golden inclusions (not overly clear/vibrant)
+- [x] Upload corrected images to S3
+- [x] Update product images in database
+- [x] Verify corrected images display on product page

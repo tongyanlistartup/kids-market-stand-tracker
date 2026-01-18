@@ -170,3 +170,10 @@
 - [x] Investigate why featured creations images aren't displaying on home page
 - [x] Fix image URLs or component logic
 - [x] Verify images display correctly on home page
+
+## New Product - Yellow Jade Bee Water Bottle Charm
+- [x] Beautify 3 water bottle charm images with white backgrounds
+- [x] Upload all 3 images to S3 CDN
+- [x] Create new "Charms" category in database
+- [x] Add water bottle charm product with multiple images at $10
+- [x] Verify product displays with scrollable image carousel
